@@ -1,0 +1,3 @@
+Source branch: codex/local-restaurant-cms
+Source commit: 7661feda17650bcc422a69036913d05c52bd9f45
+Version: 1.2.0
