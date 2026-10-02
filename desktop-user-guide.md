@@ -60,3 +60,13 @@ Quit the app before running a newer installer. Application data survives normal 
 The app and its jobs run while open or minimized. Quitting stops the local services. After an unexpected restart, reopen it and review any interrupted Counter action, blocked PDF job or backup warning. **Local jobs** lets managers retry blocked invoices after resolving disk-space problems. Keep adequate free disk space and a separate backup copy.
 
 This release is for one Windows PC and one shared Windows account. It does not provide online ordering, customer accounts, email, thermal printing, payment-terminal integration, split payments, purchasing/accounting or multi-PC access. Do not expose its loopback services to a network.
+
+# Software updates (1.3.1)
+
+Open **Software updates** from the Management menu. The owner can check, download, read changes and choose **Install now**. Save or park Counter work first. The app verifies a local recovery backup, closes safely and checks the new version before reopening.
+
+To update overnight, enable **Allow automatic overnight updates on this PC** and save preferences. The default window is 3–5 am Melbourne time. Leave Windows signed in (it can be locked), keep the PC on mains power, and finish current edits. Optional wake support depends on Windows settings. Nothing installs simply because you close the app. Internet is needed to find/download/approve updates; normal restaurant work remains offline.
+
+Use **Install tonight**, **Remind me tomorrow**, or turn automatic updates off. Managers can check and read releases; installation and scheduling belong to the owner. New-version notes are cached, and update history records success or failures. If an update needs recovery, follow its message and reopen the CMS. Never delete restaurant data to fix an update.
+
+Version 1.3.1 needs one manual installation to introduce this system to 1.2.0 installations. Download the EXE, close the CMS, run it and reopen. Data is preserved. See [update lifecycle and publishing](desktop-updates.md) for administration and recovery.

@@ -1,4 +1,12 @@
-# Bengal Spice CMS 1.2.0
+# Bengal Spice CMS 1.3.1
+
+Software updates adds owner-controlled downloads and optional overnight installation, signed release verification, local recovery backups, an independent Windows maintenance companion, release notes and per-staff notifications. Managers can check releases; only owners change installation policy. Counter transactions and unsaved work block update preparation. Existing hosted services are unchanged.
+
+Install 1.3.1 manually once. Automatic updates are initially off. See the [operating guide](desktop-user-guide.md) and [update lifecycle](desktop-updates.md). Windows publisher warnings remain possible because no paid signing certificate is used.
+
+The verification record documents packaged UI, Windows scheduling, recovery and installer acceptance, including their test boundaries. Stable publication requires acceptance of the exact installer bytes.
+
+## Bengal Spice CMS 1.2.0
 
 - Simplified per-user Windows installation with automatic launch after interactive installation; silent installation stays silent.
 - Eight guided setup steps with progress, reversible slide transitions, keyboard focus management and reduced-motion support.
