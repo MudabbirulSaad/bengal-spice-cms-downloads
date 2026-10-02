@@ -1,5 +1,35 @@
 # Windows CMS — release verification
 
+## Version 1.3.3: session recovery and visible reopening, 2 October 2026
+
+Build source `602b7d0d9eaa520f037a30cb9cf6020e9b05f791`; installer `Bengal-Spice-CMS-Setup-1.3.3-x64.exe`, 187,149,762 bytes, SHA-256 `da716594102997d19700124d751add11fa6360b4f20360f7465e59a370b7e64a`. Formatting, lint, typecheck, 40 unit tests, the 63-path API contract, Next/worker builds, NSIS packaging and the complete bundled PostgreSQL, contact, update, backup and fault-recovery suites passed.
+
+The exact installer upgraded an isolated 1.3.2 copy outside the checkout. It created and verified a pre-upgrade backup, retained all business-record hashes and displayed the new-version notice. The complete installed session regression passed again: ended-session API/IPC redirect, incorrect-password handling, valid sign-in, direct staff navigation, expired/anonymous sign-out, cookie clearing and saved-draft recovery after restart.
+
+The hidden-window failure observed in the withdrawn 1.3.2 candidate is fixed by explicitly showing the ready application window. `desktop-hidden-launch-check.mjs` starts the installed executable with Windows' hidden process flag and verifies a real visible window, then repeats with the application's minimized flag and checks the Windows minimized state. Both modes passed and closed normally. The same hidden startup flag had affected the diagnostic restart of the normal 1.2.0 application; its existing window was brought back into view without closing it again or changing business data.
+
+The final public GitHub download also passed the owner's authenticated **Install now** path from 1.3.2 to these exact 1.3.3 bytes. It verified release signatures/digests, created an encrypted local backup and restored it into a temporary database, installed silently, validated database/server/worker startup, handed over the maintenance companion and reopened a visible application window. Complete-row business hashes matched, and the next owner session displayed and acknowledged the release notes. The external backup destination remained deliberately unavailable; the update used its verified local recovery backup. Test scheduling was turned off afterwards.
+
+The real scheduled task had downloaded the earlier candidate but correctly deferred installation when Windows activity was under 20 minutes. That idle safeguard was not bypassed. The final 1.3.3 lifecycle acceptance used explicit owner installation; a complete unattended 1.3.3 installation is not claimed. The earlier 1.3.1 scheduled installation and current scheduling-policy unit checks remain separately recorded.
+
+All tests used synthetic profiles on this PC. Normal program files, registration and shortcuts were preserved; the normal installation remains at 1.2.0 for the user to upgrade manually. The cloud checkout's 154 pre-existing changes remain untouched. There is no schema change, session-lifetime extension or relaxation of staff authorization.
+
+## Version 1.3.2: withdrawn Preview candidate, 2 October 2026
+
+This candidate passed session recovery and direct installer acceptance but was withdrawn before Stable promotion. A real owner-requested update completed download verification, backup restoration verification, silent installation and headless readiness, then reopened a hidden window. Windows enumeration confirmed a hidden “Staff workspace” window in the correct test process while readiness returned HTTP 200. The test's visible-window assertion failed. The helper uses Windows' hidden startup flag; the ready application must explicitly show its normal window. Published candidate bytes remain immutable.
+
+The reported Counter screen retained a cached owner header while both web requests and native `cms:state-read` returned `SIGN_IN_REQUIRED`. Read-only inspection found no active local sessions. The normal installed executable was still 1.2.0. Graceful close/reopen restored the normal sign-in route without resetting credentials or restaurant data. Session expiry reproduced the same stuck screen on the released 1.3.1 installer; the original session's exact end time was not recoverable from retained rows.
+
+The regression command `CMS_UPDATE_TEST_ROOT=<isolated acceptance profile> node scripts/desktop-session-check.mjs` timed out waiting for sign-in on 1.3.1. The final 1.3.2 installation passes Counter API expiry, native saved-state expiry, invalid-password form retention, valid reauthentication, direct staff/Counter navigation, repeated expired/anonymous sign-out, cookie clearing and restart. The saved draft and complete-row hashes of sales, payments, invoices, contacts, catalogue and stock remained identical. No synthetic records or credentials were inserted into the normal restaurant profile.
+
+Source build commit: `888fc4be92f86b9dd089179c64fc880c381998d3`. Installer: `Bengal-Spice-CMS-Setup-1.3.2-x64.exe`, 187,149,687 bytes; SHA-256 `28a169693cf172a905ede5f356f09cb2f5db2d63390ca46697dcdb12a26cd3d5`. Formatting, ESLint, TypeScript, 40 unit tests, the 63-path OpenAPI contract, Next standalone/worker builds, NSIS packaging and the full bundled database, contact, update, backup and recovery suites passed. The added database integration check proves sign-out revokes only its own session, accepts expired/absent sessions and still rejects a foreign Origin.
+
+The actual silent installer upgraded an isolated 1.3.1 copy outside the checkout. Its verified pre-upgrade backup, identical business hashes and version-change acknowledgement passed. Normal program files were locked against modification; installer registration and shortcuts were restored and verified. `scripts/desktop-session-upgrade-check.mjs` retains this executable check. The normal installation was left at its existing version for the user to upgrade.
+
+A test-harness navigation race was corrected after the patch first passed API and IPC recovery: a Counter poll could redirect to sign-in before the test's explicit page navigation, yielding Chromium `ERR_ABORTED`. The test accepts that specific navigation cancellation and still requires the sign-in page to render. The subsequent complete packaged regression passed. Application bytes were unchanged by this test correction.
+
+Testing used isolated synthetic profiles on this Windows PC. No clean VM or second PC is claimed. This patch does not change the database schema, session lifetime or business authorization rules.
+
 ## Version 1.2.0: guided installation and setup, 1 October 2026
 
 - Installer: `Bengal-Spice-CMS-Setup-1.2.0-x64.exe`, 186,849,149 bytes.

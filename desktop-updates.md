@@ -4,7 +4,7 @@ The desktop branch owns Windows updates. The hosted application, customer databa
 
 ## Owner experience
 
-Install 1.3.1 manually once. Software updates then shows the installed version, approved release, download progress, last successful check, release notes, schedule and history. A failed/offline check is distinct from being up to date. Managers may check and read updates; only owners may download, install, select Preview or change machine preferences. Cashiers can read changes and acknowledge their own notifications.
+On 1.2.0 or earlier, install 1.3.3 manually once. Software updates then shows the installed version, approved release, download progress, last successful check, release notes, schedule and history. A failed/offline check is distinct from being up to date. Managers may check and read updates; only owners may download, install, select Preview or change machine preferences. Cashiers can read changes and acknowledge their own notifications.
 
 Automatic updates require the owner's explicit opt-in on each installation. Defaults: Stable, 03:00–05:00 Australia/Melbourne, wake disabled, mains power, and 20 minutes without Windows or CMS activity. The last 30 minutes of a window cannot start an installation. Checks run on startup, every six hours while open, manually, and through the enabled Windows schedule. Missed Windows triggers always recheck the Melbourne window. A signed-out or switched-off PC cannot update. Optional wake requests depend on Windows and hardware support.
 

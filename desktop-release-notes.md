@@ -1,4 +1,12 @@
-# Bengal Spice CMS 1.3.1
+# Bengal Spice CMS 1.3.3
+
+Fixes Counter getting stuck on “Sign in to the restaurant workspace” after a session ends. Both ordinary API requests and native saved-draft requests now return to sign-in. Sign out clears an expired session, and opening a staff page without a valid session no longer produces a generic page error. Saved Counter drafts and restaurant records are preserved; the eight-hour session lifetime and authorization checks are unchanged.
+
+Install this version over your existing installation. Version 1.2.0 and earlier need a manual installation; 1.3.1 can use Software updates. No database migration is required.
+
+The ready CMS window is explicitly shown after an update launches it, preserving a requested minimized state. The 1.3.2 candidate fixed session recovery but was withdrawn from Preview when its update acceptance found this hidden-window issue. It was never promoted to Stable.
+
+## Bengal Spice CMS 1.3.1
 
 Software updates adds owner-controlled downloads and optional overnight installation, signed release verification, local recovery backups, an independent Windows maintenance companion, release notes and per-staff notifications. Managers can check releases; only owners change installation policy. Counter transactions and unsaved work block update preparation. Existing hosted services are unchanged.
 

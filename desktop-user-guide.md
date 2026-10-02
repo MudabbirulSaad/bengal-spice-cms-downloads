@@ -16,6 +16,8 @@ On the final page, **Finish setup** checks the saved requirements, then **Open C
 
 The owner adds manager and cashier accounts under **Team & access**. Sign out/lock when changing staff. Suspending staff or resetting their password immediately revokes their sessions. Owners control staff, business/tax settings, imports and restoration. Managers control restaurant operations and refunds. Cashiers see their own tickets, orders and sales and cannot refund or cancel paid orders.
 
+Sessions last eight hours. If your session ends, sign in again with the same local username and password. Your saved Counter draft remains available. Sign out also works after expiry. Reinstalling keeps restaurant data and does not reset accounts or passwords.
+
 ## Daily work
 
 1. Receive ingredients, record wastage or use a stocktake to set the observed balance. Use compatible units: g/kg, ml/l, or whole count. Configure packs explicitly.
@@ -69,4 +71,4 @@ To update overnight, enable **Allow automatic overnight updates on this PC** and
 
 Use **Install tonight**, **Remind me tomorrow**, or turn automatic updates off. Managers can check and read releases; installation and scheduling belong to the owner. New-version notes are cached, and update history records success or failures. If an update needs recovery, follow its message and reopen the CMS. Never delete restaurant data to fix an update.
 
-Version 1.3.1 needs one manual installation to introduce this system to 1.2.0 installations. Download the EXE, close the CMS, run it and reopen. Data is preserved. See [update lifecycle and publishing](desktop-updates.md) for administration and recovery.
+Install 1.3.3 manually if you currently use 1.2.0 or earlier. Download the EXE, close the CMS, run it and reopen. Data is preserved. Version 1.3.1 can use Software updates. See [update lifecycle and publishing](desktop-updates.md) for administration and recovery.

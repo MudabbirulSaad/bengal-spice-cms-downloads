@@ -2,13 +2,13 @@
 
 An offline restaurant management application for one Windows PC.
 
-**[Download the Windows installer](https://github.com/MudabbirulSaad/bengal-spice-cms-downloads/releases/download/v1.3.1/Bengal-Spice-CMS-Setup-1.3.1-x64.exe)** · **[View the latest release](https://github.com/MudabbirulSaad/bengal-spice-cms-downloads/releases/latest)**
+**[Download the Windows installer](https://github.com/MudabbirulSaad/bengal-spice-cms-downloads/releases/download/v1.3.3/Bengal-Spice-CMS-Setup-1.3.3-x64.exe)** · **[View the latest release](https://github.com/MudabbirulSaad/bengal-spice-cms-downloads/releases/latest)**
 
-Current version: **1.3.1**. Requires **Windows 11 x64**. No GitHub account is needed to download the public release.
+Current version: **1.3.3**. Requires **Windows 11 x64**. No GitHub account is needed to download the public release.
 
 ## Install
 
-1. Download and run `Bengal-Spice-CMS-Setup-1.3.1-x64.exe` from the release assets. The Source code ZIP/TAR files contain documentation, not the installer.
+1. Download and run `Bengal-Spice-CMS-Setup-1.3.3-x64.exe` from the release assets. The Source code ZIP/TAR files contain documentation, not the installer.
 2. Follow Windows' installation prompts. The installer is unsigned, so an unknown-publisher message may appear.
 3. The app opens automatically. Choose **Set up this restaurant** for a new restaurant or **Restore a backup** for existing data.
 4. Follow the eight guided steps to create the owner account, save its recovery code, review restaurant details, service/payment settings, menu and opening stock, and verify an encrypted backup.
@@ -19,7 +19,7 @@ When upgrading, close the app before running the new installer. Existing restaur
 
 ## Software updates
 
-Install 1.3.1 manually once over an older installation. The owner can then use **Software updates** to check releases, read changes and enable optional overnight installation. Automatic updates start off. Updates verify their signed release and a local encrypted recovery backup before installation; leave Windows signed in and the PC on mains power for overnight updates.
+On 1.2.0 or earlier, install 1.3.3 manually once. Newer versions can update inside the CMS. The owner can then use **Software updates** to check releases, read changes and enable optional overnight installation. Automatic updates start off. Updates verify their signed release and a local encrypted recovery backup before installation; leave Windows signed in and the PC on mains power for overnight updates.
 
 See the [update lifecycle and publishing guide](desktop-updates.md).
 
